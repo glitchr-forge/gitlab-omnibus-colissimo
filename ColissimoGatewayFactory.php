@@ -12,11 +12,8 @@ class ColissimoGatewayFactory extends GatewayFactory
     protected function populateConfig(ArrayObject $config)
     {
         $config->defaults([
-            'omnibus.factory_name' => 'Colissimo',
-            'omnibus.factory_title' => 'Colissimo',
-            'omnibus.action.print_slip' => new PackingSlipAction(),
-            'omnibus.action.shipping' => new ShippingAction(),
-            'omnibus.action.tracking' => new TrackingAction(),
+            'omnibus.factory_name' => 'colissimo',
+            'omnibus.factory_title' => 'Colissimo'
         ]);
     }
 }
