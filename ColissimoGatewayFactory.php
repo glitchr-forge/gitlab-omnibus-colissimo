@@ -2,18 +2,21 @@
 
 namespace Omnibus\Colissimo;
 
-use Omnibus\Core\GatewayFactory;
-use Omnibus\Colissimo\Action\ShippingAction;
-use Omnibus\Colissimo\Action\TrackingAction;
-use Omnibus\Colissimo\Action\PackingSlipAction;
+use Omnibus\Config;
+use Omnibus\GatewayFactory;
 
-class ColissimoGatewayFactory extends GatewayFactory
+/**
+ * Colissimo (La Poste). Its web services (labels, tracking, relay points)
+ * are not wired yet: for now the gateway rates from configuration only
+ * ("rates" option, Omnibus\Action\ConfiguredRatingAction).
+ */
+final class ColissimoGatewayFactory extends GatewayFactory
 {
-    protected function populateConfig(ArrayObject $config)
+    protected function populateConfig(Config $config): void
     {
         $config->defaults([
             'omnibus.factory_name' => 'colissimo',
-            'omnibus.factory_title' => 'Colissimo'
+            'omnibus.factory_title' => 'Colissimo',
         ]);
     }
 }

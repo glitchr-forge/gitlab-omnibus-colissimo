@@ -1,29 +1,41 @@
 {
-  "name": "omnibus/colissimo",
-  "description": "",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Marco Meyer",
-      "email": "marco.meyer@glitchr.io",
-      "homepage": "http://glitchr.io/"
+    "name": "omnibus/colissimo",
+    "type": "library",
+    "description": "Omnibus Colissimo (La Poste): rates from configuration; labels, tracking and relay points to come.",
+    "keywords": [
+        "shipping",
+        "omnibus",
+        "colissimo",
+        "la poste"
+    ],
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Marco Meyer",
+            "email": "marco.meyer@glitchr.io"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "glitchr/omnibus": "^2.0@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omnibus\\Colissimo\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnibus\\Colissimo\\Tests\\": "Tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
     }
-  ],
-  "require": {
-    "php": ">=7.4"
-  },
-  "require-dev": {
-  },
-  "suggest": {
-  },
-  "autoload": {
-    "psr-4": {
-      "Omnibus\\Colissimo\\": ""
-    }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0-dev"
-    }
-  }
 }
